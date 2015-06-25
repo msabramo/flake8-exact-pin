@@ -25,7 +25,7 @@ setup(
     version=get_version(),
     author='Marc Abramowitz',
     author_email='msabramo@gmail.com',
-    install_requires=['setuptools', 'foo==1.5.6'],
+    install_requires=['setuptools'],
     entry_points={
         'flake8.extension': [
             'flake8_exact_pin = flake8_exact_pin:ExactPinChecker'
