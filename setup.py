@@ -28,7 +28,7 @@ setup(
     install_requires=['setuptools'],
     entry_points={
         'flake8.extension': [
-            'flake8_exact_pin = flake8_exact_pin:ExactPinChecker'
+            'P = flake8_exact_pin:ExactPinChecker'
         ],
     },
     url='https://github.com/msabramo/flake8-exact-pin',
