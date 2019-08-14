@@ -68,7 +68,7 @@ def pinned_install_requires(tree, noqa):
                     })
                     continue
 
-                requirement = str_node.s
+                requirement = str_node.s.split(';', 1)[0]
                 if '==' in requirement:
                     errors.append({
                         'message': '{0} {1}: "{2}"'.format(
