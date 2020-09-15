@@ -55,4 +55,4 @@ Now, when you run ``flake8``, the plugin will automatically be used.
 
 When an exact pin is found, ``flake8`` will output something like::
 
-    ./setup.py:28:37: P001 exact pin found in install_requires: "pyramid==1.5.6"
+    ./setup.py:28:37: PIN001 exact pin found in install_requires: "pyramid==1.5.6"
