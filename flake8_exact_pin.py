@@ -6,7 +6,7 @@ import tokenize
 
 __version__ = '0.0.2'
 
-EXACT_PIN_ERROR_CODE = 'P001'
+EXACT_PIN_ERROR_CODE = 'PIN001'
 EXACT_PIN_ERROR_MESSAGE = 'exact pin found in install_requires'
 
 
@@ -53,7 +53,7 @@ def pinned_install_requires(tree, noqa):
                 node.value.elts
             except AttributeError:
                 errors.append({
-                    'message': 'P100 Unrecognised install_requires value',
+                    'message': 'PIN100 Unrecognised install_requires value',
                     'line': node.lineno,
                     'col': node.col_offset,
                 })
@@ -62,7 +62,7 @@ def pinned_install_requires(tree, noqa):
             for str_node in node.value.elts:
                 if not isinstance(str_node, ast.Str):
                     errors.append({
-                        'message': 'P101 Unrecognised install_requires item',
+                        'message': 'PIN101 Unrecognised install_requires item',
                         'line': str_node.lineno,
                         'col': str_node.col_offset,
                     })
@@ -87,13 +87,13 @@ def pinned_install_requires(tree, noqa):
     else:
         if setup_node:
             errors.append({
-                'message': 'P103 Missing install_requires in setup(..)',
+                'message': 'PIN103 Missing install_requires in setup(..)',
                 'line': setup_node.lineno,
                 'col': setup_node.col_offset,
             })
         else:
             errors.append({
-                'message': 'P104 Missing setup()',
+                'message': 'PIN104 Missing setup()',
                 'line': 0,
                 'col': 0,
             })
