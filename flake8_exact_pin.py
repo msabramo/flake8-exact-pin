@@ -4,7 +4,7 @@ import sys
 import tokenize
 
 
-__version__ = '0.0.2'
+__version__ = '0.1.0'
 
 EXACT_PIN_ERROR_CODE = 'PIN001'
 EXACT_PIN_ERROR_MESSAGE = 'exact pin found in install_requires'
